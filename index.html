@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Initializing...</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: black;
+      color: #00ff9c;
+      font-family: "Courier New", monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .terminal {
+      width: 90%;
+      max-width: 500px;
+      background: #020202;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(0,255,156,0.25);
+    }
+    .line { margin: 6px 0; }
+    .hidden { display: none; }
+    video {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="terminal" id="term">
+  <div class="line">> Connecting to secure server...</div>
+  <div class="line">> Bypassing firewall █▒▒▒▒▒</div>
+  <div class="line">> Access granted ✔</div>
+  <div class="line">> Decrypting secret file...</div>
+  <div class="line">> Opening surprise...</div>
+</div>
+
+<div class="terminal hidden" id="videoBox">
+  <h3 style="color:white">Hey ❤️</h3>
+  <video controls autoplay muted playsinline>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+</div>
+
+<script>
+  setTimeout(() => {
+    document.getElementById("term").classList.add("hidden");
+    document.getElementById("videoBox").classList.remove("hidden");
+    document.title = "For You ❤️";
+  }, 4500);
+</script>
+
+</body>
+</html>
